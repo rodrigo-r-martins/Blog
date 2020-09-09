@@ -1,0 +1,9 @@
+.posts {
+    background-color: rgb(194, 194, 194);
+    padding: 30px;
+    border: solid black;
+}
+
+input {
+    margin-top: 10px;
+}
