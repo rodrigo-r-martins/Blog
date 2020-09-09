@@ -1,0 +1,29 @@
+.addpost {
+  width: 100%;
+}
+
+.inputId {
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  width: auto;
+}
+
+.addpost input,
+.addpost textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.addpost input[type="submit"] {
+  padding: 5px;
+  background-color: grey;
+  border: none;
+  cursor: pointer;
+  font-size: medium;
+}
