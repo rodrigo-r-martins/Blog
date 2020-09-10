@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./Header";
+import Header from "./components/Header";
 import axios from "axios";
-import AddPost from "./AddPost";
-import LoadingPosts from "./LoadingPosts";
-import Posts from "./Posts";
+import AddPost from "./components/AddPost";
+import LoadingPosts from "./components/LoadingPosts";
+import Posts from "./components/Posts";
 
 class App extends Component {
   constructor() {
@@ -119,7 +119,12 @@ class App extends Component {
           <LoadingPosts />
         ) : (
           this.state.data.map((post, index) => (
-            <Posts index={index} post={post} del={this.deletePost} />
+            <Posts
+              key={index}
+              index={index}
+              post={post}
+              del={this.deletePost}
+            />
           ))
         )}
       </div>
