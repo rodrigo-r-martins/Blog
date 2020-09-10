@@ -1,7 +1,7 @@
 import React from "react";
 import "./AddPost.css";
 
-function AddPost(functions, states) {
+function AddPost({ functions, state }) {
   return (
     <div className="addpost">
       <form className="form">
@@ -9,12 +9,12 @@ function AddPost(functions, states) {
           onChange={functions.changeTitle}
           type="text"
           placeholder="Title"
-          value={states.title}
+          value={state.title}
         />
         <textarea
           onChange={functions.changeBody}
           placeholder="Enter Body"
-          value={states.body}
+          value={state.body}
         ></textarea>
         <input onClick={functions.addPost} type="submit" value="Add Post" />
       </form>

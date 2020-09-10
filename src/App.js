@@ -36,15 +36,8 @@ class App extends Component {
     });
   };
 
-  editPost = (postIndex, title, body) => {
-    this.setState({
-      id: postIndex + 1,
-      title: title,
-      body: body,
-    });
-  };
-
   addPost = (e) => {
+    e.preventDefault();
     if (this.state.title === "" || this.state.body === "") {
       alert("No field should be empty");
       return;
@@ -131,7 +124,7 @@ class App extends Component {
                 <h2>
                   {index + 1}- {post.title}
                 </h2>
-                <p>{post.body}...</p>
+                <p>{post.body}</p>
                 <button
                   onClick={() => this.deletePost(index)}
                   className="delete"
