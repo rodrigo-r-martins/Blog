@@ -3,6 +3,8 @@ import "./App.css";
 import Header from "./Header";
 import axios from "axios";
 import AddPost from "./AddPost";
+import LoadingPosts from "./LoadingPosts";
+import Posts from "./Posts";
 
 class App extends Component {
   constructor() {
@@ -107,36 +109,21 @@ class App extends Component {
       body: this.state.body,
     };
 
-    if (this.state.data.length === 0) {
-      return <h1>Loading posts...</h1>;
-    } else {
-      return (
-        <div className="App">
-          <div>
-            <Header />
-            <AddPost functions={functions} state={states} />
-          </div>
-          {this.state.data.length === 0 ? (
-            <h1>Loading Posts...</h1>
-          ) : (
-            this.state.data.map((post, index) => (
-              <article key={index}>
-                <h2>
-                  {index + 1}- {post.title}
-                </h2>
-                <p>{post.body}</p>
-                <button
-                  onClick={() => this.deletePost(index)}
-                  className="delete"
-                >
-                  Delete
-                </button>
-              </article>
-            ))
-          )}
+    return (
+      <div className="App">
+        <div>
+          <Header />
+          <AddPost functions={functions} state={states} />
         </div>
-      );
-    }
+        {this.state.data.length === 0 ? (
+          <LoadingPosts />
+        ) : (
+          this.state.data.map((post, index) => (
+            <Posts index={index} post={post} del={this.deletePost} />
+          ))
+        )}
+      </div>
+    );
   }
 }
 
