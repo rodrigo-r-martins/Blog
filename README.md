@@ -5,14 +5,8 @@ This Blog was created as part of a code challenge.
 
 To run it use:
 
-<ol>
-    <li>npm install</li>
-    <ul>
-        <li>This command will install all dependencies used in the project;</li>
-    </ul>
-    <li>npm start</li>
-    <ul>
-        <li>This command will start the project;</li>
-    </ul>
-</ol>
+1) npm install
+    - This command will install all dependencies used in the project;
 
+2) npm start
+    - This command will start the project;
