@@ -6,7 +6,7 @@ This Blog was created as part of a code challenge.
 To run it use:
 
 1) npm install
-    - This command will install all dependencies used in the project;
+  - This command will install all dependencies used in the project;
 
 2) npm start
-    - This command will start the project;
+  - This command will start the project;
