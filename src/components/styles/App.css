@@ -1,0 +1,117 @@
+/*
+{{{ GENERAL }}}
+*/
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/*
+{{{ HEADER }}}
+*/
+
+.header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 30px;
+  margin: 0;
+  position: sticky;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.header__nav p {
+  margin-right: 30px;
+  color: white;
+  display: inline;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.header__logo {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/*
+{{{ POSTS }}}
+*/
+
+.posts {
+  padding: 10px;
+  background-color: whitesmoke;
+  margin-top: 7px;
+}
+
+.posts > p {
+  padding: 20px;
+  text-align: justify;
+}
+
+.posts__delete {
+  padding: 5px;
+  background-color: lightgray;
+  border: none;
+  cursor: pointer;
+}
+
+.addpost {
+  width: 100%;
+}
+
+.addpost__form {
+  width: 100%;
+}
+
+.addpost__title, 
+.addpost__text {
+  width: 98%;
+  border: 2px solid #ddd;
+  margin: 5px 0;
+  padding: 5px;
+  font-size: 14px;
+  resize: none;
+}
+
+.addpost__submit {
+  width: 100%;
+  padding: 5px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  background-color: lightgray;
+  border: none;
+  cursor: pointer;
+}
+
+.posts__delete:hover,
+.addpost__submit:hover {
+  background-color: gray;
+}
+
+/*
+{{{ FOOTER }}}
+*/
+.footer {
+  color: white;
+  background-color: black;
+  padding: 30px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+

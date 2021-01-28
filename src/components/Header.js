@@ -1,11 +1,10 @@
 import React from "react";
-import "./Header.css";
 
-function Header() {
+const Header = () => {
   return (
     <div className="header">
       <nav className="header__nav">
-        <a href="/">Home</a>
+        <p>Home</p>
       </nav>
       <div className="header__logo">Blog</div>
     </div>
