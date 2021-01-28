@@ -1,13 +1,13 @@
 import React from "react";
 
-function Posts({ index, post, del }) {
+const Posts = ({ index, post, del }) => {
   return (
-    <article key={index}>
+    <article key={index} className="posts">
       <h2>
         {index + 1}- {post.title}
       </h2>
       <p>{post.body}</p>
-      <button onClick={() => del(index)} className="delete">
+      <button onClick={() => del(index)} className="posts__delete">
         Delete
       </button>
     </article>
